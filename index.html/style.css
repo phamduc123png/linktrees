@@ -68,3 +68,36 @@ footer {
   margin-top: 40px;
   color: #888;
 }
+header {
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  padding: 24px 0 16px 0;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin: 0 0 8px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.18);
+  color: #222;
+}
