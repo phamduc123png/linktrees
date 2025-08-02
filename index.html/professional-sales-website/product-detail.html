@@ -1,0 +1,84 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Details - ProSales</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>ProSales</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#cart" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-detail container">
+      <div class="product-detail-container">
+        <div class="product-detail-image">
+          <img id="product-image" src="" alt="">
+        </div>
+        <div class="product-detail-info">
+          <h2 id="product-name"></h2>
+          <p class="product-price" id="product-price"></p>
+          <p class="product-description" id="product-description"></p>
+          <div class="product-meta">
+            <p><strong>Category:</strong> <span id="product-category"></span></p>
+            <p><strong>Availability:</strong> <span id="product-availability"></span></p>
+          </div>
+          <div class="product-actions">
+            <label for="quantity">Quantity:</label>
+            <select id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button id="add-to-cart-btn" class="btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="product-reviews">
+        <h3>Customer Reviews</h3>
+        <div class="review" id="reviews-container">
+          <!-- Reviews will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ProSales. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Initialize product detail page
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = parseInt(urlParams.get('id'));
+      
+      if (productId) {
+        loadProductDetails(productId);
+      } else {
+        // Redirect to products page if no product ID
+        window.location.href = 'index.html#products';
+      }
+    });
+  </script>
+</body>
+</html>

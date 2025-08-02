@@ -306,6 +306,138 @@ footer {
   letter-spacing: 1px;
 }
 
+/* Product Detail Page */
+.product-detail {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.product-detail-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.product-detail-image {
+  flex: 1;
+  text-align: center;
+}
+
+.product-detail-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-detail-info {
+  flex: 1;
+}
+
+.product-detail-info h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0077cc;
+  margin-bottom: 20px;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.product-meta {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.product-meta p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.product-actions label {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.product-actions select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.product-actions .btn-primary {
+  margin-left: 15px;
+}
+
+/* Product Reviews */
+.product-reviews {
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+
+.product-reviews h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.review {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.review-author {
+  font-weight: 600;
+  color: #0077cc;
+}
+
+.review-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.review-rating {
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.review-content {
+  line-height: 1.6;
+  color: #444;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   nav ul {
@@ -328,5 +460,20 @@ footer {
   .cart {
     width: 90%;
     margin: 40px auto;
+  }
+  
+  /* Product Detail Responsive */
+  .product-detail-container {
+    flex-direction: column;
+  }
+  
+  .product-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .product-actions .btn-primary {
+    margin-left: 0;
+    margin-top: 15px;
   }
 }
